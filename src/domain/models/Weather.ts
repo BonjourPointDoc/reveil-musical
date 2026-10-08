@@ -1,0 +1,1 @@
+export type Weather = "SOLEIL" | "PLUIE" | "NEIGE" | "NUAGEUX";
