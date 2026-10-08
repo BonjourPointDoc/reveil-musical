@@ -13,10 +13,11 @@ export class ItunesRepositoryAdapter implements IMusicRepository {
         }
 
         const data = await response.json();
-        return (data.results || []).map((item: any) => ({
+        const results = (data.results || []).map((item: any) => ({
             title: item.trackName,
             artistName: item.artistName,
             url: item.trackViewUrl || item.previewUrl
         }));
+        return results[0] ?? null;
     }
 }

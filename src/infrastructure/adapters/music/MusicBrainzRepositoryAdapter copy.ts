@@ -18,10 +18,11 @@ export class MusicBrainsRepositoryAdapter implements IMusicRepository {
 
         const data = await response.json();
 
-        return (data.recordings || []).map((item: any) => ({
+        const results =  (data.recordings || []).map((item: any) => ({
             title: item.title,
             artistName: item["artist-credit"]?.[0]?.name ?? "Artiste inconnu",
             url: item.id ? `https://musicbrainz.org/recording/${item.id}` : undefined
         }));
+        return results[0] ?? null;
     }
 }

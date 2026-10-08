@@ -133,7 +133,7 @@ export class MockUserRepositoryAdapter implements IUserRepository {
         const user = this.users.get(userId);
 
         if (!user) {
-        throw new Error(`User ${userId} not found`);
+            throw new Error(`User ${userId} not found`);
         }
 
         const key = this.buildKey(day, weather);
