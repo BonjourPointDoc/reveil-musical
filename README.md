@@ -1,6 +1,8 @@
 Soddu-Chandemerle Valentine
 # TP Examen - Réveil Musical
 
+**Note :** Pour simuler les emails, sms et notificatons push, j'ai effectué des logs dans la console.
+
 ## Structure
 ```Plaintext
 /src 
