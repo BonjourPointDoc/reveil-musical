@@ -13,7 +13,7 @@ export class LocalFallbackRepositoryAdapter implements IMusicRepository {
         { title: "Gymnopédie n° 1", artistName: "Erik Satie", url: "https://local.audio/fallback/gymnopedie-1.mp3" },
     ]
 
-    find(query: string): Promise<Track> {
+    async find(query: string): Promise<Track> {
         const normalizedQuery = query.toLowerCase().trim();
 
         const match = this.LOCAL_FALLBACK_TRACKS.find(

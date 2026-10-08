@@ -18,10 +18,12 @@ export class MusicService implements IMusicService {
     }
 
     async get(track: TrackInfo, fallback: TrackInfo): Promise<Track> {
-        const query = this.buildQuery(track);
-        const music = await this.musicRepo.find(query);
-        if (music) return music;
-      
+        try {
+            const query = this.buildQuery(track);
+            const music = await this.musicRepo.find(query);
+            if (music) return music;
+        } catch (error) {}
+
         const fallbackQuery = this.buildQuery(fallback);
         const fallbackMusic = await this.fallbackRepo.find(fallbackQuery);
         return fallbackMusic!;

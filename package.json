@@ -1,14 +1,13 @@
 {
-  "name": "api-meteo",
+  "name": "reveil-musical",
   "version": "1.0.0",
-  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "description": "TP Examen Maitrise risques",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/application/server.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.etu.mines-ales.fr:vsoddu/api-meteo.git"
+    "dev": "ts-node-dev --respawn --transpile-only src/application/server.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +15,10 @@
   "type": "commonjs",
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/node": "^26.6.1",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.14",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   },
