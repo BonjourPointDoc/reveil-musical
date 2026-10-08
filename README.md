@@ -44,7 +44,7 @@ Soddu-Chandemerle Valentine
 Utilisation de la commande **npx license-checker -- summary** :
 
 | Licence | Nombre | Type |
-|---|---|
+|---|---|---|
 | MIT | 337 | Permissive |
 | ISC | 38 | Permissive |
 | BSD-3-Clause | 12 | Permissive |
